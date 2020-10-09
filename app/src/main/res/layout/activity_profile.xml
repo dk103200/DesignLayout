@@ -104,8 +104,8 @@
 
         <ImageView
             android:id="@+id/img_item1"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:src="@drawable/item" />
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -143,8 +143,8 @@
         android:layout_below="@id/item1">
         <ImageView
             android:id="@+id/img_item2"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:src="@drawable/item" />
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -186,8 +186,8 @@
 
         <ImageView
             android:id="@+id/img_item3"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:src="@drawable/item" />
 
         <RelativeLayout
