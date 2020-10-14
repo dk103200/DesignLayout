@@ -7,11 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     EditText txtuser, txtpass;
-    Button log;
+    TextView signUp;
+    Button login;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,11 +21,19 @@ public class MainActivity extends AppCompatActivity {
 
         txtuser = (EditText) findViewById(R.id.user);
         txtpass = (EditText) findViewById(R.id.pass);
-        log = (Button) findViewById(R.id.btn_sign);
-        log.setOnClickListener(new View.OnClickListener() {
+        login = (Button) findViewById(R.id.btn_sign);
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 login();
+            }
+        });
+
+        signUp = (TextView) findViewById(R.id.lb_sign_up);
+        signUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                signUp();
             }
         });
     }
@@ -42,5 +52,9 @@ public class MainActivity extends AppCompatActivity {
         else
             Toast.makeText(getApplicationContext(),"Vui lòng nhập thông tin đăng nhập",Toast.LENGTH_LONG).show();
 
+    }
+    public void signUp(){
+        Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+        startActivity(intent);
     }
 }
