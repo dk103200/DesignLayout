@@ -33,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                signUp();
+                Intent intent = new Intent(MainActivity.this, SignUpActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -41,20 +42,17 @@ public class MainActivity extends AppCompatActivity {
     public void login(){
         if (txtuser.getText().length() != 0 && txtpass.getText().length() != 0 ){
             if (txtuser.getText().toString().trim().equals("admin") && txtpass.getText().toString().equals("123") ){
-                Toast.makeText(getApplicationContext(),"Đăng nhập thành công",Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+                Toast.makeText(getApplicationContext(),"Đăng nhập thành công",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, ListActivity.class);
                 startActivity(intent);
             }
             else{
-                Toast.makeText(getApplicationContext(),"Thông tin đăng nhập không hợp lệ",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),"Thông tin đăng nhập không hợp lệ",Toast.LENGTH_SHORT).show();
             }
         }
         else
-            Toast.makeText(getApplicationContext(),"Vui lòng nhập thông tin đăng nhập",Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),"Vui lòng nhập thông tin đăng nhập",Toast.LENGTH_SHORT).show();
 
     }
-    public void signUp(){
-        Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
-        startActivity(intent);
-    }
+
 }
