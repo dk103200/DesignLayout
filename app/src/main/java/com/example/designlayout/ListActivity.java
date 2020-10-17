@@ -31,7 +31,7 @@ public class ListActivity extends AppCompatActivity {
         arrayCourse = new ArrayList<Course>();
 
 
-        arrayCourse.add(new Course("Android",3799000,R.drawable.android));
+
         arrayCourse.add(new Course("IOS",5550000,R.drawable.ios));
         arrayCourse.add(new Course("PHP",2999000,R.drawable.php));
         arrayCourse.add(new Course("Unity",4799000,R.drawable.unity));

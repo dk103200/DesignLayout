@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -46,8 +47,8 @@ public class Adapter extends BaseAdapter {
         TextView txtDetail = (TextView) convertView.findViewById(R.id.txtdetail);
         txtDetail.setText(String.valueOf(arrayCourse.get(position).gia));
 
-//        ImageView img = (ImageView) convertView.findViewById(R.id.img);
-//        img.setImageResource(arrayCourse.get(position).hinh);
+        ImageView img = (ImageView) convertView.findViewById(R.id.img);
+        img.setImageResource(arrayCourse.get(position).hinh);
 
         return convertView;
     }
